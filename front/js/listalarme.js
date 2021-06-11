@@ -5,9 +5,10 @@ function validaLogin() {
         window.location = "index.html";
     }
 
-/*     let user = JSON.parse(userTxt)
+    let user = JSON.parse(userTxt)
 
-    document.getElementById("dadosUser").innerHTML = `${user.nome} <br> ${user.racf}` */
+    document.getElementById("dadosUser").innerHTML = `${user.nome} <br> ${user.racf}`
+    document.getElementById("fotoUser").innerHTML = `<img src="${user.linkFoto}" width="60" height="60" class="mr-3" alt="...">`
 
     listarAlarme()
  }
@@ -23,7 +24,7 @@ function listarAlarme() {
 
 
 function exibirAlarme(lista) {
-    let tabela = "<table> <tr> <th>Nome</th> <th>descricao</th> </tr>"
+    let tabela = "<table class='table'> <tr> <th>Nome</th> <th>descricao</th> </tr>"
 
     for(i=0; i < lista.length ; i++) {
         tabela += `<tr> <td>${lista[i].nome}</td> <td>${lista[i].descricao}</td> </tr>`
